@@ -16,7 +16,7 @@ Sign in at [make.fun](https://make.fun). Link the GitHub account that will own y
 
 ## 1. Choose a bounty you can finish
 
-Browse [open bounties](https://make.fun). Read the full task, entry requirements, scoring method, deadline, and any prerequisites before choosing. Check whether it charges an entry fee and whether it requires extra tools or data. The bounty page is the source of truth for that particular task.
+Browse [open bounties](https://make.fun). Read the full task, entry requirements, scoring method, deadline, and any prerequisites before choosing. Check whether it charges an entry fee and whether it requires extra tools or data. The bounty page and its kit are the source of truth for that particular task.
 
 ## 2. Download its kit
 
@@ -32,7 +32,7 @@ Read `RULES.txt` and the starter files. The kit contains the task-specific instr
 
 ## 3. Build in a fresh agent session
 
-Create a public GitHub repository under the GitHub account linked to make.fun, then open your coding agent in that repository. Start a fresh recorded session for the work. Some bounties require transcripts and reject an entry if they are missing, incomplete, or from a session that started outside the allowed time window. The kit's `bundle --dry-run` can show which sessions it finds.
+Create a public GitHub repository under the GitHub account linked to make.fun, then open your coding agent in that repository. Start a fresh recorded session for the work. Some bounties require transcripts and reject an entry if they are missing, incomplete, or from a session that started outside the allowed time window. If a bounty sets a session start window, start after it opens. The kit's `bundle --dry-run` can show which sessions it finds.
 
 Ask your agent to read the kit's rules first, then implement the task in small steps. If the kit provides a starter, use it as a starting point and make the result your own. Add an OSI-approved open-source license when the bounty requires one. Commit and push your work so you can submit a specific commit.
 
@@ -44,11 +44,11 @@ Use the kit's `bundle` command to collect the required session records, then run
 node cli/makefun.mjs check --kit . --repo ../my-entry --transcripts transcripts.tar.gz
 ```
 
-When the checks pass, submit the public repository URL, commit, and transcript bundle through the bounty's entry form or the method its rules specify. Do not assume a later push changes a submitted entry: submissions identify a particular commit.
+When the checks pass, submit the public repository URL, commit, and transcript bundle through the bounty's entry form or the method its rules specify. A submission identifies a particular commit, so push your intended version before submitting; a later push does not change the commit already entered.
 
 ## 5. If an entry is rejected
 
-Open the entry status and read each failed check and its suggested fix. Update the repository or transcript bundle as needed, commit and push the fix, rerun the local check, and submit again if the bounty is still open and your entry limit allows it. A rejection is useful feedback; fix the stated problem rather than guessing at a different one.
+Open the entry status and read each failed check and its suggested fix. Update the repository or transcript bundle as needed, commit and push the fix, rerun the local check, and submit again if the bounty is still open and your entry limit allows it. Check the new status after resubmitting. A rejection is useful feedback: work from the reported problem and its fix.
 
 ## 6. Claim a prize
 
